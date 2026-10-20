@@ -71,7 +71,17 @@ def export(destination, data_root):
     index = index.replace('<script src="app.js" defer>', '<script src="preview-adapter.js"></script>\n  <script src="app.js" defer>')
     (destination / 'index.html').write_text(index, encoding='utf-8')
     (destination / '.nojekyll').touch()
-    dump(destination / 'data/events.json', Calendar(data_root).payload())
+    events = Calendar(data_root).payload()
+    poster_index = ROOT / 'assets/posters/index.json'
+    if poster_index.exists():
+        mapping = json.loads(poster_index.read_text(encoding='utf-8'))
+        (destination / 'assets/posters').mkdir(exist_ok=True)
+        for event in events['events']:
+            name = mapping.get(event.get('poster'))
+            if name and re.fullmatch(r'[a-f0-9]{64}\.(jpg|png|webp)', name):
+                shutil.copy2(poster_index.parent / name, destination / 'assets/posters' / name)
+                event['poster'] = f'./assets/posters/{name}'
+    dump(destination / 'data/events.json', events)
 
     db = sqlite3.connect(f'{(data_root / "spot.sqlite3").as_uri()}?mode=ro', uri=True)
     db.row_factory = sqlite3.Row

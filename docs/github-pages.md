@@ -17,6 +17,10 @@ GitHub Pages публикует только `public-preview/`. Python-серв�
 python3 tools/export_preview.py --output /tmp/spot-preview-new
 ```
 
+Для сохранения оригиналов актуальных афиш перед экспортом запустите
+`python3 tools/cache_preview_posters.py` (нужны Pillow и curl). Картинки
+копируются без изменения размера и качества.
+
 Проверьте результат, замените содержимое `public-preview/` новым экспортом,
 затем закоммитьте и отправьте изменения в `main`. GitHub Actions развернёт
 только `public-preview/`.
