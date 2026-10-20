@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0a0a">
+  <meta name="description" content="СПОТ в Благовещенске. Афиша концертов и вечеринок, билеты и фотографии с твоих любимых ночей.">
+  <title>СПОТ — твоя точка сборки</title>
+  <link rel="icon" href="assets/spot-logo.jpg">
+  <link rel="preload" href="assets/golos-400.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/oswald-700.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/лого спот.png" as="image">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/entry-loader.css">
+  <script src="assets/entry-loader.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="entry-loader" class="entry-loader" aria-hidden="true">
+    <div class="entry-logo" aria-hidden="true">
+      <img class="entry-piece" src="assets/лого спот.png" alt="" width="6327" height="1258">
+      <img class="entry-piece" src="assets/лого спот.png" alt="" width="6327" height="1258">
+      <img class="entry-piece" src="assets/лого спот.png" alt="" width="6327" height="1258">
+      <img class="entry-piece" src="assets/лого спот.png" alt="" width="6327" height="1258">
+    </div>
+    <svg class="entry-star" viewBox="0 0 50 50" fill="currentColor" aria-hidden="true"><path d="m25 2 6.7 14.1 15.5 2.3L36 29.4l2.6 15.5L25 37.6l-13.6 7.3L14 29.4 2.8 18.4l15.5-2.3Z"/></svg>
+  </div>
+  <a class="skip-link" href="#events">Перейти к афише</a>
+  <main>
+    <section class="hero" aria-label="Клуб СПОТ">
+      <video id="hero-video" class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/red-portrait.jpg" aria-label="Видео с вечеринок СПОТа"><source src="assets/spot-reel.mp4" type="video/mp4"></video>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <header class="header wrap">
+        <a class="brand" href="#" aria-label="СПОТ — на главную"><img src="assets/лого спот.png" alt="СПОТ" width="6327" height="1258"></a>
+        <nav aria-label="Главная навигация"><a href="#events">Афиша</a><a href="#moments">Моменты</a><a href="#place">Контакты</a></nav>
+        <div class="header-socials"><a class="social-link social-chip" href="https://www.instagram.com/spot.blg/" target="_blank" rel="noreferrer" aria-label="Instagram СПОТ — открыть в новой вкладке"><svg class="social-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.8" r="1.1" fill="currentColor"/></svg><span class="social-name">Instagram</span><span class="social-arrow" aria-hidden="true">↗</span></a><a class="social-link social-chip" href="https://t.me/spotblg" target="_blank" rel="noreferrer" aria-label="Telegram СПОТ — открыть в новой вкладке"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.6 3.8 2.9 10.6c-1.2.5-1.2 1.2-.2 1.5l4.6 1.5 10.6-6.7c.5-.3 1-.1.6.3l-8.6 7.7-.3 4.7c.5 0 .7-.2 1-.5l2.2-2.1 4.6 3.4c.9.5 1.5.2 1.7-.9l3-14.5c.3-1.4-.5-2-1.5-1.4Z"/></svg><span class="social-name">Telegram</span><span class="social-arrow" aria-hidden="true">↗</span></a></div>
+      </header>
+      <div class="hero-center wrap"><span class="hero-city">Благовещенск</span><h1><img class="hero-logo" src="assets/лого спот.png" alt="СПОТ" width="6327" height="1258"></h1><p>Твоя точка сборки.</p></div>
+      <div class="hero-bottom wrap"><div><p class="hero-motto">На СПОТе много силы.</p><p class="hero-note">Музыка громче. Свои рядом.</p></div><div class="hero-controls"><a class="button primary ticket-button" href="#events" aria-label="Смотреть афишу"><span class="ticket-label">Смотреть афишу</span><span class="ticket-stub" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M6 6h16v16M22 6 6 22" stroke="currentColor" stroke-width="2"/></svg><span class="ticket-barcode"></span></span></a><button class="video-toggle" type="button" aria-label="Приостановить видео" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button></div></div>
+    </section>
+    <section class="section wrap" id="events" aria-labelledby="events-title">
+      <div class="section-head"><div><span class="section-kicker">Встречаемся на СПОТе</span><h2 id="events-title">Афиша</h2></div><p>Выбирай свой вечер.<br>Билеты — на Qtickets и Яндекс Афише.</p></div>
+      <p id="events-status" class="source-note" role="status">Загружаем афишу СПОТа…</p>
+      <div id="events-grid" class="events-grid" aria-busy="true"></div>
+      <div class="calendar-links"><a class="under-link" href="https://blagoveshensk.qtickets.events/" target="_blank" rel="noreferrer">Афиша Qtickets <span aria-hidden="true">↗</span></a><a class="under-link" href="https://afisha.yandex.ru/blagoveshchensk/concert/places/spot-blagoveshchensk" target="_blank" rel="noreferrer">СПОТ на Яндекс Афише <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="moments-section" id="moments" aria-labelledby="moments-title"><div class="wrap section">
+      <div class="section-head"><div><span class="section-kicker">Ночи, которые остаются с нами</span><h2 id="moments-title">Моменты СПОТ</h2></div><p>Найди себя и своих.<br>Фото с вечеринок — здесь.</p></div>
+      <div id="albums-grid" class="albums-grid" aria-busy="true"></div>
+      <p id="albums-status" class="empty-message" role="status">Загружаем фотоальбомы…</p>
+    </div></section>
+  </main>
+  <footer class="club-footer" id="place" aria-labelledby="place-title">
+    <div class="footer-content wrap">
+      <div class="footer-main">
+        <h2 id="place-title">Твоя точка<br><span>сборки.</span></h2>
+        <div class="footer-destination">
+          <p class="footer-city">Благовещенск</p>
+          <p class="footer-address">Театральная, 170<span>ТРК «Реал», 1 этаж</span></p>
+          <a class="footer-route" href="https://2gis.ru/blagoveshensk/firm/70000001110675808" target="_blank" rel="noreferrer" aria-label="Построить маршрут в 2ГИС"><span>Построить маршрут<small>СПОТ в 2ГИС</small></span><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 8h24v24M32 8 8 32" stroke="currentColor" stroke-width="2.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-socials"><a class="social-link social-chip" href="https://t.me/spotblg" target="_blank" rel="noreferrer" aria-label="Telegram СПОТ — открыть в новой вкладке"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.6 3.8 2.9 10.6c-1.2.5-1.2 1.2-.2 1.5l4.6 1.5 10.6-6.7c.5-.3 1-.1.6.3l-8.6 7.7-.3 4.7c.5 0 .7-.2 1-.5l2.2-2.1 4.6 3.4c.9.5 1.5.2 1.7-.9l3-14.5c.3-1.4-.5-2-1.5-1.4Z"/></svg><span class="social-name">Telegram</span><span class="social-arrow" aria-hidden="true">↗</span></a><a class="social-link social-chip" href="https://www.instagram.com/spot.blg/" target="_blank" rel="noreferrer" aria-label="Instagram СПОТ — открыть в новой вкладке"><svg class="social-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.8" r="1.1" fill="currentColor"/></svg><span class="social-name">Instagram</span><span class="social-arrow" aria-hidden="true">↗</span></a></div>
+      <div class="footer-bottom"><a class="brand" href="#" aria-label="СПОТ — на главную"><img src="assets/лого спот.png" alt="СПОТ" width="6327" height="1258" loading="lazy"></a><span>Музыка громче. Свои рядом.</span><span>Билеты и условия — на сайте продавца.</span><a href="#" class="footer-top">Наверх <span aria-hidden="true">↑</span></a></div>
+    </div>
+  </footer>
+  <dialog id="album-dialog" class="album-dialog" aria-labelledby="album-title">
+    <div class="album-toolbar"><div><p class="album-meta" id="album-meta"></p><h2 id="album-title">Фотоальбом</h2></div><div class="album-tools"><a id="download-album" class="button subtle" href="#">Скачать альбом <span aria-hidden="true">↓</span></a><button class="icon-button close-dialog" type="button" aria-label="Закрыть альбом">×</button></div></div>
+    <p id="album-error" class="empty-message" role="status"></p><div id="photo-grid" class="photo-grid"></div>
+    <div id="photo-viewer" class="photo-viewer" hidden><div class="viewer-top"><button id="back-to-album" class="button subtle" type="button">← Все фотографии</button><span id="photo-counter" aria-live="polite"></span><button class="icon-button close-dialog" type="button" aria-label="Закрыть просмотр">×</button></div><div class="viewer-stage"><button id="previous-photo" class="viewer-arrow previous" type="button" aria-label="Предыдущая фотография">←</button><img id="full-photo" alt=""><button id="next-photo" class="viewer-arrow next" type="button" aria-label="Следующая фотография">→</button></div><div class="viewer-bottom"><span id="photo-filename"></span><a id="download-photo" class="button primary" href="#" download>Скачать оригинал <span aria-hidden="true">↓</span></a></div></div>
+  </dialog>
+</body>
+</html>

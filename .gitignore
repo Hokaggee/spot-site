@@ -1,0 +1,9 @@
+.spot-data/
+__pycache__/
+.playwright-mcp/
+.playwright-cli/
+.DS_Store
+.venv/
+**/admin-auth.json
+**/.admin-auth-*
+artifacts/

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#f5f4f2"><title>СПОТ — фотоальбомы</title><link rel="icon" href="assets/spot-logo.jpg"><link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="admin.css"><script src="admin.js" defer></script></head>
+<body>
+  <header class="admin-header"><a class="admin-brand" href="/" aria-label="Открыть сайт СПОТ"><img src="assets/лого спот.png" alt="СПОТ" width="6327" height="1258"></a><span>Фотоальбомы клуба</span><a href="/" target="_blank" rel="noreferrer">Открыть сайт ↗</a><button id="logout" class="text-button" type="button" hidden>Выйти</button></header>
+  <main class="admin-main">
+    <section id="login-panel" class="login-panel" hidden><span class="small-label">Только для команды СПОТа</span><h1 id="login-title">Вход</h1><p id="login-description">Введи логин и пароль, чтобы загружать фотографии.</p><form id="login-form"><label for="username">Логин</label><input id="username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required maxlength="64"><label for="password" id="password-label">Пароль</label><input id="password" name="password" type="password" autocomplete="current-password" required minlength="10" maxlength="256"><button class="button primary" type="submit" id="login-submit">Войти</button></form><p id="login-error" class="error" role="alert"></p></section>
+    <div id="workspace" hidden>
+      <div class="page-heading"><div><span class="small-label">Моменты СПОТ</span><h1>Фото с твоих вечеринок.</h1><p>Загрузи кадры, выбери обложку — и альбом появится на сайте.</p></div><button id="new-album" class="button primary" type="button">+ Новый альбом</button></div>
+      <section id="editor" class="editor" aria-labelledby="editor-title">
+        <div class="editor-heading"><h2 id="editor-title">Новый альбом</h2><span id="album-state" class="state-badge">Черновик</span></div>
+        <form id="album-form"><div class="fields"><div><label for="album-name">Название вечеринки</label><input id="album-name" name="title" type="text" placeholder="Например, Пятница на СПОТе" required maxlength="120"></div><div><label for="album-date">Дата вечеринки</label><input id="album-date" name="date" type="date" required></div></div>
+          <label class="drop-zone" id="drop-zone" for="photo-input"><span class="upload-icon" aria-hidden="true">↑</span><strong>Выбрать фотографии</strong><span>Или перетащи их сюда. Количество фото в альбоме не ограничено.</span><small>JPEG, PNG, WebP · до 40 МБ на фотографию</small></label><input id="photo-input" class="file-input" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+          <div id="upload-progress" class="upload-progress" hidden><progress id="progress" max="100" value="0"></progress><p id="upload-label" role="status"></p></div>
+          <div id="upload-errors" class="error" role="alert"></div>
+          <div id="cover-help" class="cover-help" hidden><h3>Выбери обложку</h3><p>Нажми на фотографию, которую люди увидят на главной странице.</p></div><div id="editor-photos" class="editor-photos"></div>
+          <div class="editor-footer"><p id="save-note" role="status">Фотографии сначала сохранятся в черновике.</p><div class="editor-actions"><button id="save-draft" class="button secondary" type="button">Сохранить черновик</button><button id="publish" class="button primary" type="submit">Опубликовать альбом</button></div></div>
+        </form>
+        <p id="editor-error" class="error" role="alert"></p>
+      </section>
+      <section class="saved-section" aria-labelledby="saved-title"><div class="saved-heading"><h2 id="saved-title">Все альбомы</h2><span id="saved-count"></span></div><div id="saved-albums" class="saved-albums"></div><p id="saved-empty">Альбомов пока нет. Начни с первой вечеринки.</p></section>
+    </div>
+    <p id="initial-status" role="status">Загружаем редактор…</p>
+  </main>
+</body></html>

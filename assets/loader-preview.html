@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <title>СПОТ — выбираем начало</title>
+  <link rel="icon" href="/assets/spot-logo.jpg">
+  <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/assets/loader-preview.css">
+  <script src="/assets/loader-preview.js" defer></script>
+</head>
+<body>
+  <header class="preview-header shell"><a href="/" aria-label="На сайт СПОТа"><img src="/assets/лого спот.png" width="6327" height="1258" alt="СПОТ"></a><a class="back-link" href="/">Вернуться на сайт <span aria-hidden="true">↗</span></a></header>
+  <main class="shell">
+    <div class="intro"><h1>С чего<br>начнётся ночь.</h1><div><p>Четыре варианта входа на СПОТ.</p><p>Запускай на весь экран, сравнивай и повторяй.<br>После анимации — главная с нашим видео.</p></div></div>
+    <div id="variants" class="variants">
+      <article class="variant-card"><div class="thumbnail" data-art="1" aria-hidden="true"></div><div class="variant-title"><span>01</span><h2>Сборка логотипа</h2></div><p>Четыре фрагмента собираются в знак. Красная звезда завершает вход.</p><div class="card-actions"><button data-variant="1" aria-label="Смотреть вариант 1">Смотреть <span aria-hidden="true">↗</span></button><button class="slow-button" data-variant="1" data-pace="2" aria-label="Смотреть вариант 1 в замедлении">Замедленно</button></div></article>
+      <article class="variant-card"><div class="thumbnail" data-art="2" aria-hidden="true"></div><div class="variant-title"><span>02</span><h2>Твой проход</h2></div><p>Красный билет, штамп «Свой» и отрыв по перфорации. Проходи.</p><div class="card-actions"><button data-variant="2" aria-label="Смотреть вариант 2">Смотреть <span aria-hidden="true">↗</span></button><button class="slow-button" data-variant="2" data-pace="2" aria-label="Смотреть вариант 2 в замедлении">Замедленно</button></div></article>
+      <article class="variant-card"><div class="thumbnail" data-art="3" aria-hidden="true"></div><div class="variant-title"><span>03</span><h2>Первый бит</h2></div><p>Красный ритм сжимается в линию. На последнем ударе появляется СПОТ.</p><div class="card-actions"><button data-variant="3" aria-label="Смотреть вариант 3">Смотреть <span aria-hidden="true">↗</span></button><button class="slow-button" data-variant="3" data-pace="2" aria-label="Смотреть вариант 3 в замедлении">Замедленно</button></div></article>
+      <article class="variant-card"><div class="thumbnail" data-art="4" aria-hidden="true"></div><div class="variant-title"><span>04</span><h2>Клубный занавес</h2></div><p>Тонкая красная линия и две чёрные панели. За ними уже твоя ночь.</p><div class="card-actions"><button data-variant="4" aria-label="Смотреть вариант 4">Смотреть <span aria-hidden="true">↗</span></button><button class="slow-button" data-variant="4" data-pace="2" aria-label="Смотреть вариант 4 в замедлении">Замедленно</button></div></article>
+    </div>
+    <p class="preview-note">Обычная скорость — около двух секунд. «Замедленно» поможет рассмотреть детали.</p>
+  </main>
+  <footer class="shell gallery-footer"><span>СПОТ · Благовещенск</span><span>Выбираем анимацию перед главной страницей</span></footer>
+  <dialog id="preview-dialog" class="preview-dialog" aria-labelledby="preview-title">
+    <iframe id="preview-frame" title="Главная страница СПОТа после анимации" allow="autoplay" tabindex="-1"></iframe>
+    <div id="loader-overlay" class="loader-overlay" aria-hidden="true"></div>
+    <button id="skip" class="skip-button" aria-label="Пропустить анимацию">Пропустить <span aria-hidden="true">↗</span></button>
+    <div class="preview-controls"><h2 id="preview-title">Сборка логотипа</h2><div><button id="replay" aria-label="Повторить анимацию">Повторить <span aria-hidden="true">↻</span></button><button id="next" aria-label="Следующий вариант">Следующий <span aria-hidden="true">→</span></button><button id="close" class="close-button" aria-label="Закрыть просмотр">×</button></div></div>
+  </dialog>
+</body>
+</html>
