@@ -18,7 +18,7 @@ from events import Calendar
 from store import MAX_UPLOAD, Store, ValidationError
 
 ROOT = Path(__file__).resolve().parent
-PUBLIC_FILES = {'index.html', 'styles.css', 'fonts.css', 'app.js', 'admin.html', 'admin.css', 'admin.js'}
+PUBLIC_FILES = {'index.html', 'styles.css', 'fonts.css', 'app.js', 'admin.html', 'admin.css', 'admin.js', 'legal.html', 'legal.css'}
 
 
 class APIError(Exception):

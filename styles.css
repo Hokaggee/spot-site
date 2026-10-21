@@ -187,3 +187,6 @@ footer{font-size:11px;line-height:1.8}
   .footer-top{grid-column:2;grid-row:1/4;gap:12px;font-size:14px}
 }
 @media(prefers-reduced-motion:reduce){.footer-route:hover svg{transform:none}}
+
+.footer-legal{line-height:1.6;text-underline-offset:4px}.footer-legal:hover,.footer-legal:focus-visible{text-decoration:underline;color:var(--text)}.footer-legal-note{margin:0;padding-bottom:24px;max-width:760px;font-size:11px;line-height:1.7;color:var(--muted)}
+@media(max-width:600px){.footer-legal{grid-column:1}.footer-legal-note{font-size:10px;padding-bottom:22px}}

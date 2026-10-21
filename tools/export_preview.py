@@ -25,7 +25,7 @@ def dump(path, data):
 def export(destination, data_root):
     destination.mkdir(parents=True, exist_ok=True)
     # Explicit allowlist: do not copy arbitrary files from the checkout/data root.
-    for name in ('index.html', 'styles.css', 'fonts.css', 'app.js'):
+    for name in ('index.html', 'styles.css', 'fonts.css', 'app.js', 'legal.html', 'legal.css'):
         shutil.copy2(ROOT / name, destination / name)
     assets = {
         'spot-logo.jpg', 'лого спот.png', 'red-portrait.jpg', 'spot-reel.mp4',
